@@ -14,14 +14,14 @@
    xml:space="preserve"
    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
    id="svg1460"
-   sodipodi:docname="datenobservatorium2-avatar.svg"
+   sodipodi:docname="datenobservatorium.svg"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
    inkscape:export-filename="/home/rashfael/datenobservatorium-avatar.png"
    inkscape:export-xdpi="50.526318"
    inkscape:export-ydpi="50.526318"><metadata
    id="metadata1466"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs1464">
         
     
@@ -78,7 +78,11 @@
        cy="459.67899"
        r="247.407"
        style="fill:#00355e"
-       id="circle4795" /></g></clipPath></defs><sodipodi:namedview
+       id="circle4795" /></g></clipPath>
+                
+            
+                
+            </defs><sodipodi:namedview
    pagecolor="#ffffff"
    bordercolor="#666666"
    borderopacity="1"
@@ -92,9 +96,9 @@
    id="namedview1462"
    showgrid="false"
    showguides="false"
-   inkscape:zoom="1.6131579"
-   inkscape:cx="380"
-   inkscape:cy="394.39368"
+   inkscape:zoom="0.40328948"
+   inkscape:cx="1340.7964"
+   inkscape:cy="685.01698"
    inkscape:window-x="0"
    inkscape:window-y="20"
    inkscape:window-maximized="1"
@@ -114,16 +118,10 @@
    r="247.407"
    style="fill:#00355e"
    id="circle1199" />
-            </g><g
-   transform="matrix(2.6412247,0,0,2.6412213,-1335.7867,-1329.4823)"
-   id="g1279"
-   clip-path="url(#clipPath4793)">
-                <path
-   d="m 476.764,736.539 c 43.39,-12.025 104.974,-19.538 173.236,-19.538 68.262,0 129.845,7.513 173.236,19.538 -37.524,55.641 -101.137,92.263 -173.236,92.263 -72.099,0 -135.712,-36.622 -173.236,-92.263 z"
-   style="fill:#57da00"
-   id="path1277"
-   inkscape:connector-curvature="0" />
-            </g><g
+            </g><path
+   style="fill:#57da00;stroke-width:2.64122295"
+   d="M 381.00977 564.27539 C 264.85013 564.27539 156.03686 572.52304 62.654297 586.87695 A 378.94586 378.94565 0 0 0 379.99805 758.94336 A 378.94586 378.94565 0 0 0 697.29492 586.5625 C 604.37491 572.40396 496.31344 564.27539 381.00977 564.27539 z "
+   id="path1277" /><g
    transform="matrix(1.0986197,0,0,6.6800382,213.23103,-3323.3313)"
    id="g1283">
                 <path
@@ -203,15 +201,8 @@
    style="fill:#ffffff"
    id="path1315"
    inkscape:connector-curvature="0" />
-            </g><g
-   transform="matrix(3.3751141,0,0,3.3751097,-1833.976,-1904.0579)"
-   id="g1321"
-   clip-path="url(#clipPath4740)">
-                <path
-   d="m 552.6257,751.47391 16.82225,-2.27372 23.86223,-11.81112 16.49994,13.69789 45.59734,-9.292 37.171,-20.53586 30.49953,17.41936 20.87996,-12.53839 16.96705,9.32265 25.72839,7.68833 46.21461,-17.17368 c -10.61366,19.19847 -24.83517,36.12891 -41.74853,49.87453 L 686.71316,754.20725 c -0.86962,-0.18059 -1.76691,-0.17002 -2.63165,0.0293 -6.43555,1.483 -34.34248,7.9153 -34.34248,7.9153 l -68.58896,-0.89159 c 0,0 -2.71219,5.83357 -5.10712,10.98543 -0.30343,0.65323 -0.71506,1.23895 -1.20966,1.73762 -8.07963,-6.79919 -15.5166,-14.33702 -22.20759,-22.50939 z"
-   style="fill:#83e23d;stroke-width:0.81349432"
-   id="path1319"
-   inkscape:connector-curvature="0"
-   sodipodi:nodetypes="ccccccccccccccccccc" />
-            </g>
+            </g><path
+   style="fill:#83e23d;stroke-width:2.74563432"
+   d="M 503.55469 530.27148 L 378.09961 599.58203 L 224.20312 630.94336 L 168.51367 584.71094 L 89.763672 623.68945 A 378.94586 378.94565 0 0 0 130.36328 665.31641 L 358.9668 668.28906 C 358.9668 668.28906 453.15623 646.57755 474.87695 641.57227 C 477.79555 640.89953 480.8247 640.86509 483.75977 641.47461 L 623.5293 670.45117 A 378.94586 378.94565 0 0 0 710.71875 565.28906 L 676.9668 546.74414 L 606.49414 589.0625 L 503.55469 530.27148 z "
+   id="path1319" />
 </svg>

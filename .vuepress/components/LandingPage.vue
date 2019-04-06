@@ -4,18 +4,25 @@
 	h1 I code!
 
 	.projects
-		a(href="https://buntpapier.rash.codes").project.buntpapier
+		a(href="https://buntpapier.rash.codes", title="buntpapier").project.buntpapier
 			.icon
 			h2 buntpapier
 			p mixin-based vue component library
-		a(href="https://daumenkino.rash.codes").project.daumenkino
+		a(href="https://daumenkino.rash.codes", title="daumenkino").project.daumenkino
 			.icon
 			h2 daumenkino
 			p vuepress-based presentation framework
-		a(href="https://datenobservatorium.de").project.datenobservatorium
+		a(href="https://datenobservatorium.de", title="datenobservatorium").project.datenobservatorium
 			img.icon(src="~@assets/images/datenobservatorium.svg")
 			h2 datenobservatorium
 			p building a new hackerspace for Stuttgart
+	.links
+		a(href="https://github.com/rashfael", title="github").link
+			img.icon(src="~@assets/images/octocat.svg", alt="github")
+		a(href="https://chaos.social/@rash", title="fediverse").link
+			img.icon(src="~@assets/images/mastodon.svg", alt="chaos.social")
+		a(href="https://twitter.com/rashfael", title="twitter").link
+			img.icon(src="~@assets/images/twitter.svg", alt="twitter")
 </template>
 <script>
 export default {
@@ -54,13 +61,14 @@ html, body
 	font-family: monospace
 	font-size: 1.5rem
 	min-height: 100vh
+	padding: 2em 0
 	img.me
-		height: 40vh
+		height: 20vh
 		border-radius: 50%
 	h1
 		font-size: 3em
 
-	.projects
+	.projects, .links
 		display: flex
 		justify-content: center
 		max-width: 1200px
@@ -76,7 +84,7 @@ html, body
 		&:visited
 			$clr-primary-text-dark
 		.icon
-			height: 18vh
+			height: 15vh
 			width: @height
 		h2, p
 			margin: 0
@@ -87,12 +95,30 @@ html, body
 		background-image: unquote(stripe($gradclrs, 90deg, 1vh))
 		background-size: 100% 102%
 		background-repeat: no-repeat
-		border-radius: 50%
+		clip-path: circle()
+		position: relative
+		&::before
+			display: block
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 11vh
+			width: 100%
+			opacity 0.2
+			background-color: white
 	.daumenkino .icon
-		background-image: unquote(stripe($clr-red-a700 $clr-orange, -45deg, 11vh))
+		background-image: unquote(stripe($clr-red-a700 $clr-orange, -45deg, 9.4vh))
 		background-size: 100% 102%
 		background-repeat: no-repeat
 		border-radius: 50%
 
+	.link
+		margin: 1em 3em
+		.icon
+			height: 10vh
+			width: @height
 
+@media(max-width: 720px)
+	.projects, .links
+		flex-direction: column
 </style>

@@ -1,0 +1,22 @@
+{
+  "name": "rash.codes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vuepress dev .",
+    "build": "NODE_ENV=production vuepress build .",
+    "deploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.isobeef.org:rashfael/rash.codes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "vuepress": "^1.0.0-alpha.46"
+  }
+}

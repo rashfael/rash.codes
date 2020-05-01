@@ -23,6 +23,7 @@
 			img.icon(src="~@assets/images/mastodon.svg", alt="chaos.social")
 		a(href="https://twitter.com/rashfael", title="twitter").link
 			img.icon(src="~@assets/images/twitter.svg", alt="twitter")
+	.about #[a(href="mailto:rash@rash.codes") rash@rash.codes] · Sebastian Gepperth · Dammstraße 18 · 70806 Kornwestheim
 </template>
 <script>
 export default {
@@ -117,8 +118,15 @@ html, body
 		.icon
 			height: 10vh
 			width: @height
+	.about
+		margin-top: 64px
+	a
+		color: $clr-pink
 
 @media(max-width: 720px)
 	.projects, .links
 		flex-direction: column
+	.about
+		text-align: center
+		padding: 0 16px
 </style>

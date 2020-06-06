@@ -16,6 +16,10 @@
 			img.icon(src="~@assets/images/datenobservatorium.svg")
 			h2 datenobservatorium
 			p building a new hackerspace for Stuttgart
+		a(href="https://venueless.org/", title="venueless").project.venueless
+			img.icon(src="~@assets/images/venueless.svg")
+			h2 venueless
+			p online conference platform
 	.links
 		a(href="https://github.com/rashfael", title="github").link
 			img.icon(src="~@assets/images/octocat.svg", alt="github")
@@ -73,6 +77,7 @@ html, body
 		display: flex
 		justify-content: center
 		max-width: 1200px
+		flex-wrap: wrap
 	.project, .link
 		display: flex
 		flex-direction: column

@@ -27,7 +27,7 @@
 			img.icon(src="~@assets/images/mastodon.svg", alt="chaos.social")
 		a(href="https://twitter.com/rashfael", title="twitter").link
 			img.icon(src="~@assets/images/twitter.svg", alt="twitter")
-	.about #[a(href="mailto:rash@rash.codes") rash@rash.codes] · Sebastian Gepperth · Dammstraße 18 · 70806 Kornwestheim
+	.about #[a(href="mailto:rash@rash.codes") rash@rash.codes] · Sebastian Gepperth · Mühlenbecker Weg 1 · 16515 Oranienburg
 </template>
 <script>
 export default {

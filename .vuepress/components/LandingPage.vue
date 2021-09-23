@@ -1,25 +1,97 @@
 <template lang="pug">
 .landing-page
 	img.me(src="~@assets/images/lego-me-ava.jpg", alt="a lego version of me!")
-	h1 I code!
+	h1 Hi I am rash
+		br
+		| and I code and design!
+
+	h2 Open Source Projects
 
 	.projects
-		a(href="https://buntpapier.rash.codes", title="buntpapier").project.buntpapier
+		a.project.buntpapier(href="https://buntpapier.rash.codes", title="buntpapier")
 			.icon
 			h2 buntpapier
 			p mixin-based vue component library
-		a(href="https://daumenkino.rash.codes", title="daumenkino").project.daumenkino
+		a.project.daumenkino(href="https://daumenkino.rash.codes", title="daumenkino")
 			.icon
 			h2 daumenkino
 			p vuepress-based presentation framework
-		a(href="https://datenobservatorium.de", title="datenobservatorium").project.datenobservatorium
-			img.icon(src="~@assets/images/datenobservatorium.svg")
-			h2 datenobservatorium
-			p building a new hackerspace for Stuttgart
-		a(href="https://venueless.org/", title="venueless").project.venueless
+		a.project.venueless(href="https://venueless.org/", title="venueless")
 			img.icon(src="~@assets/images/venueless.svg")
 			h2 venueless
 			p online conference platform
+		a.project(href="https://github.com/rashfael", title="github")
+			img.icon(src="~@assets/images/octocat.svg", alt="github")
+			h2 Github
+			p for even more open source projects
+
+	h2 My #[span.large skills] and tools of choice include
+
+	.skills
+		span HTML
+		span CSS
+		span JavaScript
+		span Vue.js
+		span Pug
+		span Stylus
+		span Node.js
+		span SVG
+		span Affinity Designer
+		span Python
+		span Django
+		span PostgreSQL
+		span git
+		span webpack
+		span vite
+		span e2e testing
+		span mocha
+		span tuiv
+		span playwright
+		span nginx
+		span docker
+
+	h2 I build upon years of experience with
+
+	.skills
+		span Java
+		span C#/.NET
+		span C/C++
+		span Assembler
+		span PHP
+		span Ruby
+		span CoffeeScript
+		span Bootstrap
+		span Backbone
+		span Chaplin
+		span jQuery
+		span underscore
+		span D3
+		span docpad
+		span grunt
+		span gulp
+		span bower
+		span brunch
+		span MongoDb
+		span MySql
+		span Haskell
+		span Ada
+		span svn
+		span gtk
+		span OpenGL
+		span Scrum
+		span LaTeX
+		span SOAP
+		span HATEOAS
+		span USB
+		span apache
+		span msgpack
+		span Qt
+		span WinForms
+		span … and much more
+
+	h2.hire-me You can hire me!
+
+	h2 Contact me at
 	.links
 		a(href="https://github.com/rashfael", title="github").link
 			img.icon(src="~@assets/images/octocat.svg", alt="github")
@@ -27,9 +99,12 @@
 			img.icon(src="~@assets/images/mastodon.svg", alt="chaos.social")
 		a(href="https://twitter.com/rashfael", title="twitter").link
 			img.icon(src="~@assets/images/twitter.svg", alt="twitter")
+
 	.about #[a(href="mailto:rash@rash.codes") rash@rash.codes] · Sebastian Gepperth · Mühlenbecker Weg 1 · 16515 Oranienburg
 </template>
 <script>
+import "@fontsource/share-tech-mono"
+
 export default {
 	components: {},
 	data () {
@@ -63,7 +138,7 @@ html, body
 	flex-direction: column
 	justify-content: center
 	align-items: center
-	font-family: monospace
+	font-family: "Share Tech Mono"
 	font-size: 1.5rem
 	min-height: 100vh
 	padding: 2em 0
@@ -72,6 +147,9 @@ html, body
 		border-radius: 50%
 	h1
 		font-size: 3em
+		text-align: center
+	h2
+		text-align: center
 
 	.projects, .links
 		display: flex
@@ -128,10 +206,26 @@ html, body
 	a
 		color: $clr-pink
 
-@media(max-width: 720px)
-	.projects, .links
-		flex-direction: column
-	.about
+	.skills
+		max-width: 640px
+		line-height: 36px
+		margin: 0 1em
 		text-align: center
-		padding: 0 16px
+		span
+			display: inline-block
+			&:not(:last-child)::after
+				content: '/'
+				font-weight: bold
+				color: $clr-blue-grey-400
+				margin: 0 4px
+	.hire-me
+		font-size: 4em
+	@media(max-width: 720px)
+		.projects, .links
+			flex-direction: column
+		.about
+			text-align: center
+			padding: 0 16px
+		.hire-me
+			font-size: 2em
 </style>

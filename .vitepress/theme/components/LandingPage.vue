@@ -1,6 +1,6 @@
 <template lang="pug">
 .landing-page
-	img.me(src="~@assets/images/lego-me-ava.jpg", alt="a lego version of me!")
+	img.me(src="/assets/images/lego-me-ava.jpg", alt="a lego version of me!")
 	h1 Hi I am rash
 		br
 		| and I code and design!
@@ -17,110 +17,101 @@
 			h2 daumenkino
 			p vuepress-based presentation framework
 		a.project.venueless(href="https://venueless.org/", title="venueless")
-			img.icon(src="~@assets/images/venueless.svg")
+			img.icon(src="/assets/images/venueless.svg")
 			h2 venueless
 			p online conference platform
 		a.project(href="https://github.com/rashfael", title="github")
-			img.icon(src="~@assets/images/octocat.svg", alt="github")
+			img.icon(src="/assets/images/octocat.svg", alt="github")
 			h2 Github
 			p for even more open source projects
 
-	h2 My #[span.large skills] and tools of choice include
+	h2 My skills and tools of choice include
 
-	.skills
-		span HTML
-		span CSS
-		span JavaScript
-		span Vue.js
-		span Pug
-		span Stylus
-		span Node.js
-		span SVG
-		span Affinity Designer
-		span Python
-		span Django
-		span PostgreSQL
-		span git
-		span webpack
-		span vite
-		span e2e testing
-		span mocha
-		span tuiv
-		span playwright
-		span nginx
-		span docker
+	ul.skills
+		li HTML
+		li CSS
+		li JavaScript
+		li Vue.js
+		li Pug
+		li Stylus
+		li Node.js
+		li SVG
+		li Affinity Designer
+		li Python
+		li Django
+		li PostgreSQL
+		li git
+		li webpack
+		li vite
+		li e2e testing
+		li mocha
+		li tuiv
+		li playwright
+		li nginx
+		li docker
 
 	h2 I build upon years of experience with
 
-	.skills
-		span Java
-		span C#/.NET
-		span C/C++
-		span Assembler
-		span PHP
-		span Ruby
-		span CoffeeScript
-		span Bootstrap
-		span Backbone
-		span Chaplin
-		span jQuery
-		span underscore
-		span D3
-		span docpad
-		span grunt
-		span gulp
-		span bower
-		span brunch
-		span MongoDb
-		span MySql
-		span Haskell
-		span Ada
-		span svn
-		span gtk
-		span OpenGL
-		span Scrum
-		span LaTeX
-		span SOAP
-		span HATEOAS
-		span USB
-		span apache
-		span msgpack
-		span Qt
-		span WinForms
-		span … and much more
+	ul.skills
+		li Java
+		li C#/.NET
+		li C/C++
+		li Assembler
+		li PHP
+		li Ruby
+		li CoffeeScript
+		li Bootstrap
+		li Backbone
+		li Chaplin
+		li jQuery
+		li underscore
+		li D3
+		li docpad
+		li grunt
+		li gulp
+		li bower
+		li brunch
+		li MongoDb
+		li MySql
+		li Haskell
+		li Ada
+		li svn
+		li gtk
+		li OpenGL
+		li Scrum
+		li LaTeX
+		li SOAP
+		li HATEOAS
+		li USB
+		li apache
+		li msgpack
+		li Qt
+		li WinForms
+		li … and much more
 
 	h2.hire-me You can hire me!
 
 	h2 Contact me at
 	.links
 		a(href="https://github.com/rashfael", title="github").link
-			img.icon(src="~@assets/images/octocat.svg", alt="github")
-		a(href="https://chaos.social/@rash", title="fediverse").link
-			img.icon(src="~@assets/images/mastodon.svg", alt="chaos.social")
+			img.icon(src="/assets/images/octocat.svg", alt="github")
+		a(href="https://chaos.social/@rash", title="fediverse", rel="me").link
+			img.icon(src="/assets/images/mastodon.svg", alt="chaos.social")
 		a(href="https://twitter.com/rashfael", title="twitter").link
-			img.icon(src="~@assets/images/twitter.svg", alt="twitter")
+			img.icon(src="/assets/images/twitter.svg", alt="twitter")
+		a(href="https://www.linkedin.com/in/rash-codes/", title="linkedin").link
+			img.icon(src="/assets/images/linkedin.svg", alt="linkedin")
 
 	.about #[a(href="mailto:rash@rash.codes") rash@rash.codes] · Sebastian Gepperth · Mühlenbecker Weg 1 · 16515 Oranienburg
 </template>
 <script>
-import "@fontsource/share-tech-mono"
+
 
 export default {
-	components: {},
-	data () {
-		return {
-		}
-	},
-	computed: {},
-	created () {},
-	mounted () {
-		this.$nextTick(() => {
-		})
-	},
-	methods: {}
 }
 </script>
 <style lang="stylus">
+@import '../colors'
 stripe(colors, angle, width)
 	$grad = 'repeating-linear-gradient(' + angle
 	for $clr, $i in colors
@@ -206,12 +197,12 @@ html, body
 	a
 		color: $clr-pink
 
-	.skills
+	ul.skills
 		max-width: 640px
 		line-height: 36px
 		margin: 0 1em
 		text-align: center
-		span
+		li
 			display: inline-block
 			&:not(:last-child)::after
 				content: '/'

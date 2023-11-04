@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "vuepress dev .",
-    "build": "NODE_ENV=production vuepress build .",
-    "deploy": "npm run build"
+    "start": "vitepress dev",
+    "build": "vitepress build",
+    "deploy": "npm run build",
+    "docs:preview": "vitepress preview"
   },
   "repository": {
     "type": "git",
@@ -15,11 +17,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "markdown-it": "^13.0.2",
     "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
-    "vuepress": "^1.0.0-alpha.46"
+    "sass": "^1.69.5",
+    "stylus": "^0.61.0",
+    "vitepress": "^1.0.0-rc.24"
   },
   "dependencies": {
-    "@fontsource/share-tech-mono": "^4.5.0"
+    "@fontsource/roboto": "^5.0.8",
+    "@fontsource/share-tech-mono": "^4.5.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3"
   }
 }

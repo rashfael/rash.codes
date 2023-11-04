@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import markdownIt from 'markdown-it'
+import { withBase, useData } from 'vitepress'
+
+import logoAX from '/assets/images/ax-semantics-square.svg'
+import logoVenueless from '/assets/images/venueless-black.svg'
+import logoOnventis from '/assets/images/onventis-square.svg'
+import logoCreatale from '/assets/images/creatale-square.svg'
+import logoUniStuttgart from '/assets/images/uni-stuttgart-square.svg'
 
 const markdown = markdownIt({
 	html: true,
@@ -8,25 +15,22 @@ const markdown = markdownIt({
 })
 
 function transformJourney (e) {
-	if (e.logo) e.logo = new URL(`../../../assets/images/${e.logo}`, import.meta.url).href
-	// transform story from markdown
 	if (e.story) {
 		e.story = markdown.render(e.story)
 	}
 	return e
 }
 
-const skills = ['js']
 const experience = [{
 	role: 'Head of Product',
 	company: 'AX Semantics GmbH',
-	logo: 'ax-semantics-square.svg',
+	logo: logoAX,
 	period: 'Aug 2016 – Now',
 	story: 'I started at AX as a **Designer** and **Frontend Engineer** with a mission to improve the learning curve and the first five minutes a new user has with the product. Over the years I completely redesigned the product to be more intuitive and guided my colleagues through ever-evolving agile processes as **Product Designer** and **Principal Engineer**. I am now spearheading product vision by FUSING? business requirements, customer needs and pushing technical boundaries as **Head of Product**.'
 }, {
 	role: 'Freelance Design & Frontend',
 	company: 'rash.codes & venueless',
-	logo: 'venueless-black.svg',
+	logo: logoVenueless,
 	period: 'April 2021 – Now',
 	story: 'At the start of the pandemic a few friends and I saw the need for a virtual conference platform for our community and existing customers. We built venueless as an open source project and successful SaaS offering and are continously improving it and adding features.'
 }, {
@@ -37,13 +41,13 @@ const experience = [{
 // }, {
 	role: 'Web Application Engineer',
 	company: 'Onventis GmbH',
-	logo: 'onventis-square.svg',
+	logo: logoOnventis,
 	period: 'Feb 2016 – Jul 2016',
 	story: 'For onventis\' procurement platform I implemented and shipped a redesign of their catalog management component together with another new hire. Unresponsive leadership and a rigid scrum process made me quit at the end of my trial period.'
 }, {
 	role: 'Co-Founder',
 	company: 'creatale GmbH',
-	logo: 'creatale-square.svg',
+	logo: logoCreatale,
 	period: 'Jan 2013 – Jan 2016',
 	story: 'With three friends from university I founded creatale as a software agency, working for clients mainly in the medical field, creating custom applications for them and building our own game prototypes.'
 }, {
@@ -55,7 +59,7 @@ const experience = [{
 const education = [{
 	role: 'Softwaretechnik',
 	company: 'Universität Stuttgart',
-	logo: 'uni-stuttgart-square.svg',
+	logo: logoUniStuttgart,
 	period: '2007 – 2013',
 	story: 'I favored practical application over theory during my studies of software engineering, learning a great deal about software engineering and processes in our projects with other departments and institutes. I sucessfully dropped out a bit before writing my thesis to start my own company.'
 }].map(transformJourney)

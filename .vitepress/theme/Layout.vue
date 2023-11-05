@@ -5,6 +5,9 @@ import { useData } from 'vitepress'
 const { site, frontmatter } = useData()
 </script>
 
-<template>
-  <Content />
+<template lang="pug">
+template(v-if="frontmatter.layout === 'none'")
+	Content
+.page-root(v-else)
+	Content.content
 </template>

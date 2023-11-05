@@ -1,1 +1,5 @@
+---
+layout: none
+---
+
 <LandingPage></LandingPage>

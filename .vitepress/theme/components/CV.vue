@@ -16,7 +16,7 @@ const markdown = markdownIt({
 
 function transformJourney (e) {
 	if (e.story) {
-		e.story = markdown.render(e.story)
+		e.story = markdown.renderInline(e.story)
 	}
 	return e
 }
@@ -26,13 +26,13 @@ const experience = [{
 	company: 'AX Semantics GmbH',
 	logo: logoAX,
 	period: 'Aug 2016 – Now',
-	story: 'I started at AX as a **Designer** and **Frontend Engineer** with a mission to improve the learning curve and the first five minutes a new user has with the product. Over the years I completely redesigned the product to be more intuitive and guided my colleagues through ever-evolving agile processes as **Product Designer** and **Principal Engineer**. I am now spearheading product vision by FUSING? business requirements, customer needs and pushing technical boundaries as **Head of Product**.'
+	story: 'I started at AX as a **UX Designer** and **Frontend Engineer** with a mission to improve the learning curve and the first five minutes a new user has with the product. Over the years I completely redesigned the product to be more intuitive and added many rich and powerful features as **Product Designer** and **Principal Engineer**, while also guiding my colleagues through ever-evolving agile processes. \nI am now spearheading product vision by fusing business requirements, customer needs and pushing technical boundaries as **Head of Product** to make content creation at scale a breeze for our customers, utilizing cutting-edge technology.'
 }, {
 	role: 'Freelance Design & Frontend',
 	company: 'rash.codes & venueless',
 	logo: logoVenueless,
 	period: 'April 2021 – Now',
-	story: 'At the start of the pandemic a few friends and I saw the need for a virtual conference platform for our community and existing customers. We built venueless as an open source project and successful SaaS offering and are continously improving it and adding features.'
+	story: 'During the pandemic a few friends and I saw the need for a **virtual conference platform** for our community and existing customers. We built venueless as an **open source project and successful SaaS offering** and are continously improving it and adding features.'
 }, {
 // 	role: 'Co-Founder & Board Member',
 // 	company: 'datenobservatorium e.V.',
@@ -43,17 +43,17 @@ const experience = [{
 	company: 'Onventis GmbH',
 	logo: logoOnventis,
 	period: 'Feb 2016 – Jul 2016',
-	story: 'For onventis\' procurement platform I implemented and shipped a redesign of their catalog management component together with another new hire. Unresponsive leadership and a rigid scrum process made me quit at the end of my trial period.'
+	story: 'For Onventis\' procurement platform **I implemented and shipped a redesign of their catalog management component** together with another new hire. Unresponsive leadership and a rigid scrum process made me quit at the end of my trial period.'
 }, {
 	role: 'Co-Founder',
 	company: 'creatale GmbH',
 	logo: logoCreatale,
 	period: 'Jan 2013 – Jan 2016',
-	story: 'With three friends from university I founded creatale as a software agency, working for clients mainly in the medical field, creating custom applications for them and building our own game prototypes.'
+	story: 'With three friends from university I founded creatale as a **software agency**, working for clients mainly in the medical field, **creating custom applications** for them and building our own game prototypes.'
 }, {
 	role: 'And much more',
 	period: 'since 2004',
-	story: `Starting with freelance web design, I've been working with a wide variety of companies, technologies and problems, from CMS like Drupal, browser-based point-of-sale systems, and building desktop applications with Java or .NET. I care a lot about strong communities and diversity, doing a lot of mentoring and creating safe spaces.`
+	story: `Starting with freelance web design, I've been working with a wide variety of companies, technologies and problems, from CMS like Drupal, browser-based point-of-sale systems, and desktop applications with Java or .NET. **I care a lot about strong communities and diversity, doing a lot of mentoring and creating safe spaces.**`
 }].map(transformJourney)
 
 const education = [{
@@ -65,27 +65,76 @@ const education = [{
 }].map(transformJourney)
 
 
-function print () {
-	window.open(location.href).print()
-}
-
 </script>
 <template lang="pug">
 .page-cv
 	.page-inner
 		nav.no-print
 			a(href="/") Back to rash.codes
-			a(href="", @click.prevent="print") Download PDF
+			a(href="/cv.pdf") Download PDF
 		header
 			img.portrait(src="~/../../../assets/images/portrait.jpg", alt="portrait of me!")
-			div
-				h1 Sebastian
-					span  "rash" 
-					| Gepperth
-				//- h2 designing and coding on the web
-				p always being on the cutting edge of web technology, drawing on decades of experience with a wide range of …building websites and custom software, dance, balance, in service to humans, create, craft, visual person
+			h1.name Sebastian
+				span  "rash" 
+				| Gepperth
+			//- h2 designing and coding on the web
+			p.description #[b Product designer], #[b frontend engineer], #[b software architect] and #[b team lead] drawing on two decades of experience with – and always being on the cutting edge of – web technologies. I feel right at home in the unknown and at the edge of the possible to get customers and users to where they need to be. Also, huge nerd.
+			//- p always being on the cutting edge of web technology, drawing on two decades of experience with a wide range of …building websites and custom software, dance, balance, in service to humans, create, craft, visual person, emergent, manifesting, holding myself to high standards, logo design
 
 		.main-wrapper
+			aside
+				ul
+					li: a(href="https://rash.codes")
+						icon(icon="fa-solid fa-link", size="lg", fixed-width)
+						| rash.codes
+					li: a(href="https://github.com/rashfael")
+						icon(icon="fa-brands fa-github", size="lg", fixed-width)
+						| github.com/rashfael
+					li: a(href="https://linkedin.com/in/rash-codes")
+						icon(icon="fa-brands fa-linkedin", size="lg", fixed-width)
+						| linkedin.com/in/rash-codes
+					li: a(href="mailto:rash@rash.codes")
+						icon(icon="fa-solid fa-envelope", size="lg", fixed-width)
+						| rash@rash.codes
+					li: span
+						div: icon(icon="fa-solid fa-location-dot", size="lg", fixed-width)
+						| Berlin, Germany
+				section
+					h2 Languages
+					ul
+						li German
+							i – native
+						li English
+							i – fluent
+				section
+					h2 Skills
+					ul.skills
+						li Naming Things
+						li Iterating
+						li Asking Questions
+						li Listening
+						li Empathizing
+						li Prioritizing
+						li Communicating Transparently
+						li Making Mistakes
+						li Creativity
+						li Leading from the Front
+						li Improving Processes
+						li Making Decisions
+						li Rapid Prototyping
+						li Taking Ownership
+
+					h2 Actively Practiced Mastery
+					ul.skills
+						li JS/TS
+						li CSS/Sass
+						li HTML/Pug
+						li SVG
+						li Vue
+						li Vite
+						li WebSockets
+						li OT & CRDTs
+					small If you want a full-ish list of everything I'm currently using or have ever used, head over to #[a(href="https://rash.codes/all") rash.codes/all].
 			main
 				section.experience
 					header
@@ -95,7 +144,7 @@ function print () {
 					ul
 						li(v-for="job in experience", :key="job.company + job.role")
 							img.company-logo(v-if="job.logo", :src="job.logo", :alt="job.company")
-							.no-img(v-else)
+							//- .no-img(v-else)
 							.content
 								header
 									.h-container
@@ -118,57 +167,17 @@ function print () {
 										h4 {{ job.company }}
 									p {{ job.period }}
 								p(v-html="job.story")
-				.buffer
-				section
-					p head over to #[a(href="rash.codes") rash.codes] for socials, (open source) projects and more
-			aside
-				ul
-					li: span
-						icon(icon="fa-solid fa-location-dot", size="lg", fixed-width)
-						| Berlin, Germany
-					li: a(href="https://rash.codes")
-						icon(icon="fa-solid fa-link", size="lg", fixed-width)
-						| rash.codes
-					li: a(href="mailto:rash@rash.codes")
-						icon(icon="fa-solid fa-envelope", size="lg", fixed-width)
-						| rash@rash.codes
-					li: a(href="https://linkedin.com/in/rash-codes")
-						icon(icon="fa-brands fa-linkedin", size="lg", fixed-width)
-						| linkedin.com/in/rash-codes
-					li: a(href="https://github.com/rashfael")
-						icon(icon="fa-brands fa-github", size="lg", fixed-width)
-						| github.com/rashfael
-				section
-					h2 Languages
-					ul
-						li German
-							i – native
-						li English
-							i – fluent
-				section
-					h2 Skills
-					ul
-						li Naming Things
-						li Asking Questions
-						li Empathizing
-						li Communicating Transparently
-						li prioritizing
-						li leading from the front
-						li Improving Processes
-						li making decisions
-						li Rapid Prototyping
-
-					h2 Actively Practiced Mastery
-					ul.skills
-						li JS/TS
-						li CSS/Sass
-						li HTML/Pug
-						li Vue
-						li Vite
-						li WebSockets
-						li OT & CRDTs
+		.buffer
+		footer
+			p Head over to #[a(href="https://rash.codes") rash.codes] for less serious content, socials, (open source) projects and more!
+				br
+				span.print-warning For an always up to date version of this CV, visit #[a(href="https://rash.codes/cv") rash.codes/cv].
 </template>
 <style lang="sass">
+@mixin stripes ($color)
+	background-image: repeating-linear-gradient(135deg, $color 0, $color 1em, transparent 1em, transparent 2em), linear-gradient(-45deg, $color 0, $color 1em, transparent 1em)
+	-webkit-print-color-adjust: exact
+	-webkit-filter: opacity(1)
 .page-cv
 	--clr-primary: #ff5722
 	--clr-secondary-text: #333
@@ -184,8 +193,9 @@ function print () {
 	li
 		list-style-type: none
 	p
-		margin: .4em 0
+		margin: .3em 0
 		line-height: 1.33em
+		text-align: justify
 	.page-inner
 		display: flex
 		flex-direction: column
@@ -197,24 +207,29 @@ function print () {
 			justify-content: space-between
 			margin: 8px 0 16px 0
 		> header
-			display: flex
+			display: grid
+			min-height: 10em
+			grid-template: 2.5em auto / 10em auto
 			gap: 16px
-			h1
-				font-weight: 300
+			h1.name
+				grid-area: 1 / 2 / 1 / 2
+				margin: .5em 0 0 0
+				font-weight: 400
 				font-family: var(--font-display)
 				span
 					color: #dd2c00
-			h2
-				font-weight: 500
-				color: var(--clr-secondary-text)
+			.description
+				grid-area: 2 / 2 / 2 / 2
 			img.portrait
+				grid-area: 1 / 1 / 1 / span 2
 				border-radius: 50%
-				width: 160px
-				height: 160px
+				width: 10em
+				height: 10em
 
 	.main-wrapper
 		display: flex
-		gap: 1em
+		flex-direction: row-reverse
+		gap: 1.3em
 		flex: auto
 		main
 			flex: auto
@@ -223,10 +238,39 @@ function print () {
 		aside
 			width: 20em
 			flex: none
-			margin: 1.5em 0 0 0
-			padding: .5em
+			margin: 1.85em 0 0 0
+			// padding: .5em
 			border: 2px solid var(--clr-primary)
+			border-top: none
+			border-bottom: none
 			align-self: flex-start
+			position: relative
+			background-color: white
+			// &::before
+			// 	content: ''
+			// 	@include stripes(var(--clr-primary))
+			// 	position: absolute
+			// 	--border-size: -.3em
+			// 	top: var(--border-size)
+			// 	left: var(--border-size)
+			// 	right: var(--border-size)
+			// 	bottom: var(--border-size)
+			// 	z-index: -1
+
+			margin: 1.55em 0 0 0
+			&::before, &::after
+				content: ''
+				@include stripes(var(--clr-primary))
+				height: 1em
+				display: block
+				
+			&::before
+				margin-bottom: .5em
+			&::after
+				margin-top: .5em
+
+			> *
+				margin: 0 .5em
 			h2
 				margin: 1em 0 .2em 0
 				font-size: 1.2em
@@ -235,17 +279,11 @@ function print () {
 				margin: 0
 				font-size: 1em
 			ul
-				margin: 0
 				padding: 0
-			section ul
-				padding: 0 0 0 1em
-				&.skills
-					display: flex
-					flex-wrap: wrap
-					gap: .5em
-					padding: 0 .5em
 			> ul li
 				margin: .4em 0
+				svg path
+					fill: var(--clr-primary)
 			li a, li > span
 				font-family: var(--font-display)
 				line-height: 1.5em
@@ -256,6 +294,29 @@ function print () {
 				text-decoration: none
 			li a:hover
 					text-decoration: underline
+			section ul
+				margin: 0
+				padding: 0 0 0 1em
+				&.skills
+					display: flex
+					flex-wrap: wrap
+					gap: .5em
+					padding: 0 .5em
+					li
+						// border: 1px solid var(--clr-primary)
+						border-radius: 5px
+						background-color: var(--clr-primary)
+						color: white
+						padding: .2em .5em
+						font-family: var(--font-display)
+						font-weight: 600
+						font-size: 1.1em
+			small
+				display: block
+				font-size: .8em
+				color: var(--clr-secondary-text)
+				margin-top: 1em
+				text-align: center
 	
 	section.experience, section.education
 		h2
@@ -264,7 +325,7 @@ function print () {
 			display: flex
 			align-items: baseline
 			font-family: var(--font-display)
-			margin-top: 1em
+			margin: 1em 0
 			h2
 				font-size: 1.8em
 			hr
@@ -272,7 +333,7 @@ function print () {
 				height: 1em
 				margin: 0
 				border: none
-				background-color: var(--clr-primary)
+				@include stripes(var(--clr-primary))
 				&:first-child
 					width: 4em
 					flex: none
@@ -284,10 +345,13 @@ function print () {
 				color: var(--clr-secondary-text)
 		ul
 			padding: 0
+			margin: 0
 		li
 			display: flex
 			gap: 1em
 			margin: 0 0 .5em 0
+			&:last-child
+				margin: 0
 		.content
 			flex: auto
 			> header
@@ -306,13 +370,56 @@ function print () {
 			width: 4em
 	.buffer
 		flex: auto
+	footer
+		margin-top: 3em
+		display: flex
+		justify-content: center
+		font-family: var(--font-display)
+		font-size: 1.2em
+		p
+			text-align: center
+		.print-warning
+			display: none
 	@media print
 		font-size: 12px
-		// padding: 1cm
 		.no-print
 			display: none !important
 		a, a:link, a:visited
 			border: none
 			color: black
 			text-decoration: none
+		footer
+			margin-top: 0
+			.print-warning
+				display: initial
+	@media screen and (max-width: 720px)
+		.page-inner 
+			> nav, > header, aside
+				margin-left: .7em
+				margin-right: .7em
+			> header
+				grid-template: 8em auto / 8em auto
+				img.portrait
+					grid-area: 1 / 1 / 1 / 1
+					width: 8em
+					height: 8em
+				h1.name
+					grid-area: 1 / 2 / 1 / 2
+				.description
+					grid-area: 2 / 1 / 2 / span 2
+		.main-wrapper
+			flex-direction: column
+			aside
+				width: auto
+			main > section > ul
+				margin-left: .3em
+				margin-right: 1em
+			.experience ul li:last-child
+				margin-left: 1em
+			section .content header
+				flex-direction: column
+
+		footer p
+			font-size: .7em
+			margin: 1em .2em
 </style>

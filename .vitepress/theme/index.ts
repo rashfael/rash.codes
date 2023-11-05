@@ -6,17 +6,19 @@ import '@fontsource/roboto'
 import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
-import "@fontsource/share-tech-mono"
+import '@fontsource/share-tech-mono'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faLink, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles'
 
 import CV from './components/CV.vue'
 import LandingPage from './components/LandingPage.vue'
 import './style.sass'
 
+config.autoAddCss = false
 library.add(faGithub, faLinkedin, faEnvelope, faLink, faLocationDot)
 
 export default {

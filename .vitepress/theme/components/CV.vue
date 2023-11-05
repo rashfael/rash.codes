@@ -175,9 +175,14 @@ const education = [{
 </template>
 <style lang="sass">
 @mixin stripes ($color)
-	background-image: repeating-linear-gradient(135deg, $color 0, $color 1em, transparent 1em, transparent 2em), linear-gradient(-45deg, $color 0, $color 1em, transparent 1em)
-	-webkit-print-color-adjust: exact
-	-webkit-filter: opacity(1)
+	@media screen
+		background-image: repeating-linear-gradient(135deg, $color 0, $color 1em, transparent 1em, transparent 2em), linear-gradient(-45deg, $color 0, $color 1em, transparent 1em)
+	@media print
+		// print rasterizes stripes with a horribly low resolution, so drop them
+		background-image: none
+		background-color: $color
+		// -webkit-print-color-adjust: exact
+		// -webkit-filter: opacity(1)
 .page-cv
 	--clr-primary: #ff5722
 	--clr-secondary-text: #333

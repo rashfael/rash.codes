@@ -26,7 +26,7 @@ const experience = [{
 	company: 'AX Semantics GmbH',
 	logo: logoAX,
 	period: 'Aug 2016 – Now',
-	story: 'I started at AX as a **UX Designer** and **Frontend Engineer** with a mission to improve the learning curve and the first five minutes a new user has with the product. Over the years I completely redesigned the product to be more intuitive and added many rich and powerful features as **Product Designer** and **Principal Engineer**, while also guiding my colleagues through ever-evolving agile processes. \nI am now spearheading product vision by fusing business requirements, customer needs and pushing technical boundaries as **Head of Product** to make content creation at scale a breeze for our customers, utilizing cutting-edge technology.'
+	story: 'I started at AX as a **UX Designer** and **Frontend Engineer** with a mission to improve the learning curve and the first five minutes a new user has with the product. Over the years I completely redesigned the product to be more intuitive and added many rich and powerful features as **Product Designer** and **Principal Engineer**, while also guiding my colleagues through ever-evolving agile processes. \nI am now spearheading product vision by fusing business requirements and customer needs while pushing technical boundaries as **Head of Product** to make content creation at scale a breeze for our customers, utilizing cutting-edge technology.'
 }, {
 	role: 'Freelance Design & Frontend',
 	company: 'rash.codes & venueless',
@@ -362,6 +362,7 @@ const education = [{
 			> header
 				justify-content: space-between
 				margin-top: 0.2em
+				margin-bottom: 0.5em
 		h3
 			margin: 0
 		h4

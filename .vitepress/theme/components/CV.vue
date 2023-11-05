@@ -389,10 +389,6 @@ const education = [{
 		font-size: 12px
 		.no-print
 			display: none !important
-		a, a:link, a:visited
-			border: none
-			color: black
-			text-decoration: none
 		footer
 			margin-top: 0
 			.print-warning

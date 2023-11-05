@@ -370,6 +370,7 @@ const education = [{
 			font-weight: 400
 		img.company-logo
 			width: 4em
+			min-width: 4em
 			object-position: top
 			object-fit: contain
 		.no-img
